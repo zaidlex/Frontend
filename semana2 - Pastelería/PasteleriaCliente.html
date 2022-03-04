@@ -3,29 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Pantheon el panadero</title>
+    <link rel="stylesheet" href="EstilosBase.css">
+    <style>
+    </style>
   </head>
   <body>
     <header>
         <h1>Bienvenidos a pastelería: Pantheon el panadero</h1>
     </header>
     <main>
-        <h2>Pastelería Pantheon el panadero, por que <i>simpre quiso ser panadero.</i></h2>
-        <img alt="imagen pantheon panadero feliz" width="196" eigth="196" srcset="" src="https://64.media.tumblr.com/eedf2eb5e02a5e0fd94b6ffd5b4678d3/tumblr_pvo5avG7Og1vo6vclo10_400.png">
+        <div class="center">
+            <h2>Pastelería Pantheon el panadero, por que <i>simpre quiso ser panadero.</i></h2>
+            <img alt="imagen pantheon panadero feliz" width="196" eigth="196" srcset="" src="https://64.media.tumblr.com/eedf2eb5e02a5e0fd94b6ffd5b4678d3/tumblr_pvo5avG7Og1vo6vclo10_400.png">
+        </div>
         <br>
 
         <!--Sabores de los pasteles-->
-        <p>Sabores disponible de los pasteles por tan sólo $40.00 pesos mxn!.</p>
-        <ul>
-            <li>Vainilla</li>
-            <li>Chocolate</li>
-            <li>Fresa</li>
-            <li>Durazno</li>
-            <li>Limon</li>
-        </ul>
+        <div class="center">
+            <p>Sabores disponibles para los pasteles por tan sólo $40.00 pesos mxn!.</p>
+            <ul class="lista">
+                <li>Vainilla</li>
+                <li>Chocolate</li>
+                <li>Fresa</li>
+                <li>Durazno</li>
+                <li>Limon</li>
+            </ul>
+        </div>
         <br><br>
 
         <!--Diseños de los pasteles-->
-        <table>
+        <table class="center">
             <tr>
                 <th>Diseños que se les puede colocar al pastel.</th>
             </tr>
@@ -43,12 +50,15 @@
             </tr>
         </table>
         <br><br>
-        <form action="./PasteleriaCompra.html">
-            <input type="submit" value="Hacer pedido">
-        </form>
+        <div class="center">
+            <a href="./PasteleriaCompra.html">
+                <button id="pedido">Hacer pedido</button>
+            </a>
+        </div>
+        <br>
     </main>
     <footer>
-        <br><br><br><br>
+        <br><br>
         <label for=""><strong>Dirección:</strong><br> West Los Angeles, California, Estados Unidos </label><br>
         <label for=""><strong>Teléfono:</strong><br> 443 322 3560 </label><br>
         <label for=""><strong>Horarios:</strong><br>

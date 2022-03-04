@@ -1,0 +1,32 @@
+body{
+    background-color: aqua;
+}
+header{
+    background-color: darkcyan;
+    text-align: center;
+}
+main{
+    background-color: gray;
+}
+footer{
+    background-color:deepskyblue;
+    text-align: right;
+}
+table{
+    background-color: aquamarine;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.lista{
+    list-style: none;
+}
+
+#pedido{
+    size: 30px;
+    font-size: 18px;
+}
