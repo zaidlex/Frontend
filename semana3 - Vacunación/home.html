@@ -9,47 +9,43 @@
 </head>
 <body>
     <header>
-        <div>
         <ul>
-            <li class="title">Vacunación</li>
+            <li class="title" style="float:left;">Vacunación</li>
             <div style="float:right">
-            <li><a href="#">Base de datos</a></li>
-            <li><a href="#">Educación</a></li>
-            <li><a href="#">Noticias</a></li>
-            <li><a href="#">Regulación</a></li>
-            <li><button class="btn-primary">Hoax Buster</button></li>
+                <li><a href="#">Base de datos</a></li>
+                <li style="background-color: #DEFFFF;"><a href="#">Educación</a></li>
+                <li style="background-color: #DEFFFF;"><a href="#">Noticias</a></li>
+                <li style="background-color: #DEFFFF;"><a href="#">Regulación</a></li>
+                <li style="background-color: #DEFFFF;"><button class="btn-primary">Hoax Buster</button></li>
             </div>
-          </ul>
-        </div>
+        </ul>
     </header>
-    <br><br>
     <main>
-        <div>
-            <h1>Combate los virus con vacunas</h1>
-            <p>Paremos esta pandemia matando los virus con una vacuna
-                no dejes que tu familia y tu sean infectados.
-            </p>
-            <aside >
-                <img width="600" height="800" src="./imgs/enfermera_vacuna.png" alt="enfermera con vacuna">
-            </aside>
-            <!-- icons-->
-            <p> <img src="./imgs/maletín-médico.png" alt=""> Mejor protección</p>
-            <p> <img src="./imgs/estrella.png" alt=""> vacunas selecionadas</p>
-
-            <div>
-                <p> <img src="./imgs/reloj.png" alt=""> Calendariza tu vacunación</p>
-                <form action="#" method="post">
-                    <img src="./imgs/marcador.png" alt=""> lugar 
+        <div class="backImg1">
+            <div class="TextLeft">
+                <h1>Combate los virus <br> con vacunas</h1>
+                <p>Paremos esta pandemia matando los virus con <br> 
+                    una vacuna no dejes que tu familia y tu <br>
+                    sean infectados.</p>
+                    <br><br>
+                <p class="plow" style="display:inline"><img class="icon" src="./imgs/maletín-médico.png" alt=""> Mejor protección</p>
+                <p class="plow" style="display:inline"><img class="icon" src="./imgs/estrella.png" alt=""> vacunas selecionadas</p>
+            </div>
+            <div class="form">
+                <p class="titleForm"> <img class="icon" src="./imgs/reloj.png" alt=""> Calendariza tu vacunación</p>
+                
+                <form  style="text-align: center; margin-left: 30px;" action="#" method="post">
+                    <img class="icon" src="./imgs/marcador.png" alt=""><label for="lugar">Lugar</label>
                     <select name="lugar">
                         <option value="Morelia" selected>Morelia</option>
                         <option value="Uruapan">Uruapan</option>
                         <option value="La piedad">La piedad</option>
                     </select>
 
-                    <img src="./imgs/calendario.png" alt=""> fecha
+                    <img class="icon" src="./imgs/calendario.png" alt=""> <label for="fecha">Fecha</label>
                     <input type="date" name="fecha" id="fecha">
                     
-                    <img src="./imgs/jeringa.png" alt=""> tipo de vacuna
+                    <img class="icon" src="./imgs/jeringa.png" alt=""> <label for="vacuna">Tipo de vacuna</label>
                     <select name="vacuna">
                         <option value="AstraZeneca">AstraZeneca</option>
                         <option value="Pfizer" selected>Pfizer</option>
@@ -61,136 +57,160 @@
                 </form>
             </div>
         </div>
-        <div><!--imagen de marca de vacunas-->
-            <img src="" alt="">
+        <div class="logosVacunas"><!--imagen de marca de vacunas-->
+            <img width="300" height="100" src="./imgs/AstraZeneca.png" alt="">
+            <img width="300" height="100" src="./imgs/sinovac.png" alt="">
+            <img width="300" height="100" src="./imgs/pfizer.png" alt="">
+            <img width="300" height="100" src="./imgs/moderna.png" alt="">
         </div>
-        <div>
+        
+        <div class="TextLeft">
             <h1>Porqué deberías vacunarte?</h1>
-            <p>para evitar cualquier duda sobre la aplicación de la vacuna COVID-19,
-                identifique los siguientes 4 beneficios de la vacunación COVID-19</p>
+            <p>Para evitar cualquier duda sobre la aplicación de la vacuna COVID-19,<br>
+                identifique los siguientes 4 beneficios de la vacunación COVID-19:</p>
         </div>
 
-        <div>
-            <div>
-                <img src="./imgs/virus.png" alt="">
-                <h4>Minimizar la propagación de virus</h4>
-                <p class="plow">La vacuna ha demostrado ser eficaz para evitar
-                    que alguien se infecte con el coronavirus</p>
+        <div class="divBeneficios">
+            <div class="itemsBeneficios">
+                <img class="icon2" src="./imgs/virus.png" alt="">
+                <h4>Minimizar la propagación <br> de virus</h4>
+                <p class="plow">La vacuna ha demostrado ser <br>
+                    eficaz para evitar que alguien se infecte <br>
+                    con el coronavirus</p>
             </div>
-            <div>
-                <img src="./imgs/seguridad-comprobado.png" alt="">
+            <div class="itemsBeneficios">
+                <img class="icon2" src="./imgs/seguridad-comprobado.png" alt="">
                 <h4>Formando anticuerpos</h4>    
-                <p class="plow">se ha demostrado que la vacuna covid-19 ayuda
-                    a conformar la respuesta de anticuerpos del sistema inmunitario</p>
+                <p class="plow">Se ha demostrado que la vacuna <br>
+                    COVID-19 ayuda a conformar la respuesta de <br>
+                    anticuerpos del sistema inmunitario</p>
             </div>
-            <div>
-                <img src="./imgs/don't-worry.png" alt="">
-                <h4>Protegiendo personas cercanas</h4>
-                <p class="plow">Los beneficios de la vacuna COVID-19 son que la 
-                    vacuna que recibimos también puede ayudar a proteger a las personas que nos rodean</p>
+            <div class="itemsBeneficios">
+                <img class="icon2" src="./imgs/don't-worry.png" alt="">
+                <h4>Protegiendo personas <br> cercanas</h4>
+                <p class="plow">Los beneficios de la vacuna COVID-19 <br>
+                    son que la vacuna que recibimos <br>
+                    también puede ayudar a proteger a las <br>
+                    personas que nos rodean</p>
             </div>
-            <div>
-                <img src="./imgs/grupo.png" alt="">
-                <h4>Creando un grupo de inmunidad</h4>
-                <p class="plow">La vacunación con COVID-19 también es beneficiosa
-                    para crear un grupo immunidad o una fuerte inmunidad</p>
+            <div class="itemsBeneficios">
+                <img class="icon2" src="./imgs/grupo.png" alt="">
+                <h4>Creando un grupo <br> de inmunidad</h4>
+                <p class="plow">La vacunación con COVID-19 <br>
+                    también es beneficios para crear un grupo <br>
+                    immunidad o una fuerte inmunidad</p>
             </div>
         </div>
-        <div>
-            <img width="600" height="800" src="./imgs/enfermera.jpg" alt="enfermera">
-            <h1>Preparaciones antes de la vacuna</h1>
-            <p>El exito de la vacuna está fuertemente influenciada por la
-                fuerza del sistema immune del cuerpo. Por lo tanto,
-                hay muchas cosas que podemos intentar hacer para que la vacuna
-                del COVID-19 funcione</p>
-            <div>
-                <img src="./imgs/no-alcohol.png" alt="">
-                <h4>Evitar bebidas alcohólicas</h4>
-                <p class="plow">No consumir bebidas alcohólicas o energizantes 
-                    durante los tres días posteriores a la aplicación de la vacuna.</p>
+
+        <!--<div id="TextPreparaciones">-->
+        <div class="TextRight">
+            <h1>Preparaciones antes <br> de la vacuna</h1>
+            <p>El exito de la vacuna está fuertemente influenciada por la <br>
+                fuerza del sistema immune del cuerpo. Por lo tanto, hay <br>
+                muchas cosas que podemos intentar hacer para que la vacuna <br>
+                del COVID-19 funcione:</p>
+        </div>
+        
+
+        <div class="backImg2">
+            <div class="backImgText">
+                <img class="icon" src="./imgs/no-alcohol.png" alt=""> <h4 style="display: inline;">Evitar bebidas alcohólicas</h4>
+                <p class="plow">No consumir bebidas alcohólicas <br>
+                    o energizantes durante los tres días posteriores <br>
+                    a la aplicación de la vacuna.</p>
             </div>
-            <div>
-                <img src="./imgs/anxious.png" alt="">
-                <h4>Evitar estrés</h4>
-                <p class="plow">no existe una forma correcta de sobrellevar la 
-                    situación y cada persona lidia con el estrés de diferente manera. </p>
+            <div class="backImgText">
+                <img class="icon" src="./imgs/anxious.png" alt=""> <h4 style="display: inline;">Evitar estrés</h4>
+                <p class="plow">no existe una forma correcta de <br> 
+                    sobrellevar la situación y cada persona lidia <br>
+                    con el estrés de diferente manera. </p>
             </div>
-            <div>
-                <img src="./imgs/comida-sana.png" alt="">
-                <h4>Comer comida saludable</h4>
+            <div class="backImgText">
+                <img class="icon" src="./imgs/comida-sana.png" alt=""><h4 style="display: inline;">Comer comida saludable</h4>
                 <p class="plow">Previene complicaciones en la salud.</p>
             </div>
-            <div>
-                <img src="./imgs/durmiendo-cama.png" alt="">
-                <h4>Dormir lo suficiente</h4>
-                <p class="plow">Necesita descanso mental para que su cuerpo se recargue.</p>
+            <div class="backImgText">
+                <img class="icon" src="./imgs/durmiendo-cama.png" alt=""> <h4 style="display: inline;">Dormir lo suficiente</h4>
+                <p class="plow">Necesita descanso mental para que <br>
+                    su cuerpo se recargue.</p>
             </div>
-            <div>
-                <img src="./imgs/ejercicio.png" alt="">
-                <h4>Hacer ejercicio o actividades físicas</h4>
-                <p class="plow">Puede reducir enfermedades todas ellas que pueden 
-                    aumentar la vulnerabilidad a la COVID-19.</p>
+            <div class="backImgText">
+                <img class="icon" src="./imgs/ejercicio.png" alt=""> <h4 style="display: inline;">Hacer ejercicio o actividades físicas</h4>
+                <p class="plow">Puede reducir enfermedades todas <br>
+                    ellas que pueden aumentar la vulnerabilidad <br>
+                    a la COVID-19.</p>
             </div>
         </div>
 
-        <div>
+        <div class="TextLeft">
             <h1>Contactos de emergencia</h1>
-            <p>Contacta uno de los contactos de abajo si tu o tu familia siente un 
-                malestar y tiene sintomas similares tales como el COVID-19, asegúrate 
-                de que también te ocupas de ti mismo antes de reportarte a nosotros:
-            </p>
+            <p>Contacta uno de los contactos de abajo si tu o tu familia siente un malestar <br>
+                y tiene sintomas similares tales como el COVID-19, asegúrate de que también <br>
+                te ocupas de ti mismo antes de reportarte a nosotros:</p>
         </div>
-        <div>
-            <div>
-                <div>
-                    <img src="./imgs/call.png" alt="">
-                    <h4>Llamar</h4>
+
+        <div class="backImg3">
+            <div class="ContactoBlock">
+                <div class="ContactoItem">
+                    <img class="icon2" src="./imgs/call.png" alt="">
+                    <h4 style="display: inline;">Llamar</h4>
                     <p class="plow">021.123.145.14</p>
                     <button class="btn-primary">Llama ahora</button>
                 </div>
-                <div>
-                    <img src="./imgs/charla.png" alt="">
-                    <h4>Chat</h4>
+                <div class="ContactoItem">
+                    <img class="icon2" src="./imgs/charla.png" alt="">
+                    <h4 style="display: inline;">Chat</h4>
                     <p class="plow">021.123.145.14</p>
                     <button class="btn-primary">Chatea ahora</button>
                 </div>
-                <div>
-                    <img src="./imgs/cámara-web.png" alt="">
-                    <h4>Video llamada</h4>
+            </div>
+            <div class="ContactoBlock">
+                <div class="ContactoItem">
+                    <img class="icon2" src="./imgs/cámara-web.png" alt="">
+                    <h4 style="display: inline;">Video llamada</h4>
                     <p class="plow">021.123.145.14</p>
                     <button class="btn-primary">Video llamada ahora</button>
                 </div>
-                <div>
-                    <img src="./imgs/mensaje.png" alt="">
-                    <h4>Mensaje</h4>
+                <div class="ContactoItem">
+                    <img class="icon2" src="./imgs/mensaje.png" alt="">
+                    <h4 style="display: inline;">Mensaje</h4>
                     <p class="plow">021.123.145.14</p>
                     <button class="btn-primary">Mensaje ahora</button>
                 </div>
             </div>
-            <img width="600" height="800" src="./imgs/enfermero.jpg" alt="">
         </div>
 
     </main>
     <footer>
-        <h1 class="title">Vacunación</h1>
-        <p>Nuestra meta es ayudar al mundo de la pandemia del COVID-19</p>
+        <ul class="ulFooter">
+            <li style="padding-right: 400px;"><dl><dt class="title">Vacunación</dt>
+                <dd><p>Nuestra meta es ayudar <br>
+                    al mundo de la pandemia <br>
+                    del COVID-19</p></dd>
+                </dl>
+            </li>
+            <li class="liFooter"><dl><dt><h4>About</h4></dt>
+                <dd><p>Sobre nosotros</p></dd>
+                <dd><p>Características</p></dd>
+                <dd><p>Noticias & blog</p></dd>
+                </dl></li>
+            <li class="liFooter"><dl><dt><h4>Compañia</h4></dt>
+                <dd><p>¿Cómo trabajamos</p></dd>
+                <dd><p>Capital</p></dd>
+                <dd><p>Seguridad</p></dd>
+            </dl>
+            </li>
+            <li class="liFooter"><dl><dt><h4>Soporte</h4></dt>
+                <dd><p>FAQs</p></dd>
+                <dd><p>Centro de soporte</p></dd>
+                <dd><p>Contáctanos</p></dd>
+            </dl>
+            </li>
+        </ul>
 
-        <h4>Acerca de</h4>
-        -Sobre nosotros
-        -Características
-        - Noticias & blog
-        <h4>Company</h4>
-        -¿Cómo trabajamos?
-        -Capital
-        -Seguridad
-        <h4>Soporte</h4>
-        -FAQs
-        -Centro de soporte
-        -Contactanos
-
-        <p>@2021 Vacunación. Todos los derechos reservados</p>
-        <p>Términos y condiciones</p>
-        <p>Política de privacidad</p>
+        <p style="float: left;">@2021 Vacunación. Todos los derechos reservados</p>
+        <p style="float: right;">Términos y condiciones</p>
+        <p style="float: right; padding-right: 100px;">Política de privacidad</p>
     </footer>
 </body>
 </html

@@ -2,16 +2,9 @@ body {
     background-color: white;
 }
 header {
-
-}
-main {
-
-}
-footer {
-
+    height: 50px;
 }
 
-/* header */
 ul {
     list-style-type: none;
     font-weight: bold;
@@ -20,7 +13,9 @@ ul {
   }
 li {
     display: inline;
-
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: -4px;
 }
 a {
     padding: 30px;
@@ -32,7 +27,6 @@ a {
 }
 
 .title {
-    float:left; 
     font-size:24px;
     color: #1C46CB;
     font-family:'Roboto', sans-serif;
@@ -53,18 +47,160 @@ a {
 h1 {
     font-family:'Roboto', sans-serif;
     color: #042AA0;
-    font-size: 20px;
+    font-size: 40px;
 }
 h4 {
-
+    font-family:'League Spartan', sans-serif;
+    color: #042AA0;
 }
 
 p {
     font-family:'League Spartan', sans-serif;
     color: gray;
+    line-height: 30px;
 }
-.plow {
+label {
     font-family:'League Spartan', sans-serif;
     color: gray;
+}
+input, select{
+    font-family:'League Spartan', sans-serif;
+    font-weight: bold;
+    color: #1C46CB;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 4%;
+    border: none;
+}
+
+
+.plow {
+    font-family:'League Spartan', sans-serif;
     font-size: 12;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+.icon2 {
+    width: 32px;
+    height: 32px;
+}
+
+.backImg1 { 
+    background-image: url(../imgs/enfermera_vacuna.png);
+    background-repeat: no-repeat;
+    background-position:  right;
+    background-size: 50% 700px; 
+    width: 100%;
+    height: 800px;
+}
+
+.TextLeft {
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+.TextRight {
+    text-align: left;
+    float:inline-end;
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 50%;
+    padding-bottom: 50px;
+}
+
+.titleForm {
+    text-align: left; 
+    color: #1C46CB;
+    font-family:'League Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.form {
+    background-color: white;
+    box-shadow: 10px 20px 10px #DEFFFF;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 830px;
+    height: 100px;
+    border: 0px;
+}
+
+.logosVacunas {
+    width: 100%;
+    place-items: end center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.divBeneficios {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px    
+}
+
+.itemsBeneficios {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    /*float: left;*/
+    width: auto;
+    height: auto;
+    box-shadow: 0px 10px 20px #98fdfd;
+}
+
+.backImg2 { 
+    background-image: url(../imgs/enfermera.jpg);
+    background-repeat: no-repeat;
+    background-position:  left;
+    background-size: 50% 900px;
+    width: 100%;
+    height: 100%;
+}
+
+.backImgText {
+    text-align: left;
+    float:inline-end;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 60%;
+    padding-bottom: 10px;
+}
+
+.backImg3 { 
+    background-image: url(../imgs/enfermero.jpg);
+    background-repeat: no-repeat;
+    background-position:  right;
+    background-size: 50% auto;
+    width: 100%;
+    height: 100%;
+}
+
+.ContactoBlock {
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 50px;
+    display: inline-block;
+    text-align: left;
+}
+
+.ContactoItem {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.ulFooter {
+    display: inline-flex;
+    padding-left: 50px;
+
+}
+
+.liFooter {
+    padding-right: 50px ;
 }
