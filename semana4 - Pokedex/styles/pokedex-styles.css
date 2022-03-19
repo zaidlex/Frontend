@@ -1,0 +1,20 @@
+body {  
+    width: auto;
+}
+
+body::after { /* Background del body*/
+    content: "";    
+    background: url(../images/pokeball-background.png);
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    background-size: 80px;
+}
+
+#buscador {
+    background-color: #D13030;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./styles/pokedex-styles.css">
+</head>
+<footer>
+    <img src="./images/pokedex-launchx.png" alt="Pokedex LaunchX">
+</footer>
+<body>
+    <div id="buscador"><!--Buscador-->
+        <label for="pokeName">Buscar por nombre o número de pokemón</label>
+        <input type="text" placeholder="pikachu o 25" id="pokeName" name="pokeName">
+        
+        <button onclick="fetchPokemon()">Buscar Pokemón</button>
+    </div>
+
+    <div><!--Pokedex-->
+        <img src="./images/Pokebola.png" alt="Pokemon" id="pokeImg" width="150px">
+        <h2 id="pokemonTitleName"></h2>
+        <h3 id="pokeNumber"></h3>
+
+        <div id="tipoPokemon">
+            <h3>Tipo</h3>
+            <span id="poketipo1"></span>
+            <span id="poketipo2"></span>
+        </div>
+
+        <div id="estadisticas">
+            <h3>Estadísticas</h3>
+            <span id="Peso"></span>
+            <span id="Altura"></span>
+            <span id="PS"></span>
+            <span id="Ataque"></span>
+            <span id="Defensa"></span>
+            <span id="AtaqueEspecial"></span>
+            <span id="DefensaEspecial"></span>
+            <span id="Velocidad"></span>
+        </div>
+
+        <div id="movimientos">
+            <h3>Movimientos</h3>
+            <ul id="ListaMovimientos">
+            </ul>
+        </div>
+    </div>
+
+    <div id="listaPokemones">
+        <div>
+            <h2>Lista de pokemóns</h4>
+            <label for="rangoPokemons">Rango de pokemóns</label>
+            <input id="rangoPokemons" type="range" min="0" max="898">
+            <button>Buscar!</button>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="./scripts/poke-funcs.js"></script>
+</footer>
+</html>
