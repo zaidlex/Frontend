@@ -30,8 +30,23 @@ h2, h4 {
 }
 
 #secPokedex {
+    margin-left: 25%;
+    margin-right: 25%;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 5px;
+}
+
+#sensorTop {
+    width: 100px;
+    margin-top: -20px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-radius: 20px;
 }
 
 #pokedex {
@@ -45,6 +60,9 @@ h2, h4 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border: 5px solid black;
 }
 
 #pantalla {
@@ -63,6 +81,7 @@ h2, h4 {
     margin: 10px;
     text-align: center;
     font-size: 28px;
+    padding: 5px;
 }
 
 #estadisticas {
@@ -106,3 +125,4 @@ h2, h4 {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
 }
+
