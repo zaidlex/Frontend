@@ -61,6 +61,18 @@ h2, h4 {
     padding: 10px;
 }
 
+#tipoPokemon {
+    margin: 10px;
+    background-color: #44A2F5;
+    width: auto;
+    font-size: 28px;
+}
+
+#estadisticas {
+    background-color: #44A2F5;
+    text-align:left;
+}
+
 #errorPaginacion {
     background-color: #BB2929;
     color: #08CBD8;
