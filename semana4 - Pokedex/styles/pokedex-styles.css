@@ -70,7 +70,20 @@ h2, h4 {
 
 #estadisticas {
     background-color: #44A2F5;
-    text-align:left;
+    text-align:center;
+    margin: 10px;
+}
+
+#movimientos {
+    margin: 10px;
+    background-color: #44A2F5;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    list-style:circle;
+    width: 300px;
+    height: 200px;
+    overflow:auto;
 }
 
 #errorPaginacion {
