@@ -101,12 +101,14 @@ const paginacion =() => {
     let max = document.getElementById("rangoPokemonsMax").value;
     let limit = max - min;
     let err = document.getElementById("errorPaginacion");
+    let block = document.getElementById("listaPokemonsPag");
 
     if (min > max) {        
         err.hidden = false;
         return null;
     }
     err.hidden = true;
+    block.hidden = false;
 
     const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${min}`;
     fetch(url).then((res) => { // obtiene el resultado
