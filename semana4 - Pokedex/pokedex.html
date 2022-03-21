@@ -17,49 +17,52 @@
         <button id="buscarPokemon" onclick="fetchPokemon()">Buscar Pokemón</button>
     </div>
 
-    <div><!--Pokedex-->
-        <img src="./images/Pokebola.png" alt="Pokemon" id="pokeImg" width="150px">
-        <h2 id="pokemonTitleName"></h2>
-        <h4 id="pokeNumber"></h3>
+    <section id="secPokedex">
+        <div id="pokedex"><!--Pokedex-->
+            <div id="pantalla">
+                <img src="./images/Pokebola.png" alt="Pokemon" id="pokeImg" width="150px" height="150px">
+                <h2 id="pokemonTitleName"></h2>
+                <h4 id="pokeNumber"></h3>
+            </div>
 
-        <div id="tipoPokemon">
-            <span id="poketipo"></span>
+            <div id="tipoPokemon">
+                <span id="poketipo"></span>
+            </div>
+
+            <div id="estadisticas">
+                <span id="Peso"></span> <br>
+                <span id="Altura"></span> <br>
+                <span id="PS"></span> <br>
+                <span id="Ataque"></span> <br>
+                <span id="Defensa"></span> <br>
+                <span id="AtaqueEspecial"></span> <br>
+                <span id="DefensaEspecial"></span> <br>
+                <span id="Velocidad"></span> <br>
+            </div>
+
+            <div id="movimientos">
+                <ul id="ListaMovimientos">
+
+                </ul>
+            </div>
         </div>
-
-        <div id="estadisticas">
-            <span id="Peso"></span> <br>
-            <span id="Altura"></span> <br>
-            <span id="PS"></span> <br>
-            <span id="Ataque"></span> <br>
-            <span id="Defensa"></span> <br>
-            <span id="AtaqueEspecial"></span> <br>
-            <span id="DefensaEspecial"></span> <br>
-            <span id="Velocidad"></span> <br>
-        </div>
-
-        <div id="movimientos">
-            <ul id="ListaMovimientos">
-
-            </ul>
-        </div>
-    </div>
-
+    </section>
     <div id="listaPokemones">
-        <div id="listaPokemonesBuscador">
-            <h2>Lista de pokemóns</h4>
-            <label for="rangoPokemons">Buscar de </label>
-            <input type="number" name="rangoPokemonsMin" id="rangoPokemonsMin"  value="0" min="0" max="898">
-            hasta
-            <input type="number" name="rangoPokemonsMax" id="rangoPokemonsMax"  value="898" min="0" max="898">
-            pokemóns
-            <!--<input id="rangoPokemons" type="range" min="0" max="898" value="898" onchange="rangoPokemonsCambiado()">-->
-            <button onclick="paginacion()">Buscar!</button>
-
-            <span>Error al cargar los pokemóns.</span>
-            
+        <div id="buscador">
+            <div style="margin-bottom: 10px;">
+                <h2>Lista de pokemones</h4>
+                <label for="rangoPokemons">Buscar de </label>
+                <input type="number" name="rangoPokemonsMin" id="rangoPokemonsMin"  value="0" min="0" max="898">
+                hasta
+                <input type="number" name="rangoPokemonsMax" id="rangoPokemonsMax"  value="898" min="0" max="898">
+                pokemones
+                <!--<input id="rangoPokemons" type="range" min="0" max="898" value="898" onchange="rangoPokemonsCambiado()">-->
+                <button onclick="paginacion()">Buscar!</button>
+            </div>
+            <span id="errorPaginacion" hidden>Error al cargar los pokemones.</span>
         </div>
-        <div id="listaPokemonesLista">
 
+        <div id="listaPokemonsPag">
         </div>
     </div>
 </body>

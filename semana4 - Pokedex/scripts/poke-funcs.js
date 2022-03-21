@@ -30,7 +30,7 @@ const fetchPokemon = () => {
         if (data) {
             let pokeImg = data.sprites.other.home.front_default;//imagen
             let pokeNom = data.forms[0].name; //Nombre del pokemon
-            let pokeNumero = data.id; //Nombre del pokemon
+            let pokeNumero = data.id; //Número del pokemon
             let pokeTipo = data.types; //tipo de pokemon
             let movimientos = data.moves;// movimientos del pokemon
             let estadisticas = data.stats; // estadisticas del pokemon
@@ -88,7 +88,6 @@ const pokeMoves = (movimientosPokemon) => {
 /* Evento para buscar pokemon al pulsar enter*/
 document.getElementById("pokeName")
 .addEventListener("keyup", function(event) {
-console.log("Event  ")
 event.preventDefault();
 if (event.key === 'Enter') {
     document.getElementById("buscarPokemon").click();
@@ -100,13 +99,16 @@ if (event.key === 'Enter') {
 const paginacion =() => {
     let min = document.getElementById("rangoPokemonsMin").value;
     let max = document.getElementById("rangoPokemonsMax").value;
-    
-    if (min > max) {
-        alert('Rango de pokemons incorrecto');
+    let limit = max - min;
+    let err = document.getElementById("errorPaginacion");
+
+    if (min > max) {        
+        err.hidden = false;
         return null;
     }
+    err.hidden = true;
 
-    const url = `https://pokeapi.co/api/v2/pokemon?limit=${min}&offset=${max}`;
+    const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${min}`;
     fetch(url).then((res) => { // obtiene el resultado
         if (res.status != "200") {
             console.log(res);
@@ -117,7 +119,53 @@ const paginacion =() => {
         }
     }).then((data) => {
         if (data) {
-            console.log(data);
+            let pokemons = data.results;
+            pokemons.forEach(pokemon => {
+                let info = getImagenNumero(pokemon.url, pokemon.name);
+            });
         }
     });
+}
+
+
+const getImagenNumero = (url, pokeNom) =>{
+    fetch(url).then((res) => { // obtiene el resultado
+        if (res.status != "200") {
+            console.log(res);
+            let pokeImg = "./images/psyduck confuso.gif";//imagen
+            let pokeNumero = "0000"; //Número del pokemon
+            paginacionItem(pokeImg, pokeNom, pokeNumero);
+        }
+        else {
+            return res.json();
+        }
+    }).then((data) => {
+        if (data) {
+            let pokeImg = data.sprites.other.home.front_default;//imagen
+            let pokeNumero = data.id; //Número del pokemon
+            paginacionItem(pokeImg, pokeNom, pokeNumero);
+        }
+    });
+}
+
+const paginacionItem = (imagen, nombre, numero) => {
+    let listaPokemons = document.getElementById("listaPokemonsPag");
+
+    pokemon = document.createElement("div");
+    pokemon.classList.add("PokePag")
+
+    let img = document.createElement("img");
+    img.width = 150;
+    img.height = 150;
+    img.src = imagen;
+    let nom = document.createElement("h2");
+    nom.textContent = nombre;
+    let num = document.createElement("h4");
+    num.textContent = numero; 
+    
+    pokemon.appendChild(img);
+    pokemon.appendChild(nom);
+    pokemon.appendChild(num);
+
+    listaPokemons.appendChild(pokemon);
 }

@@ -15,6 +15,58 @@ body::after { /* Background del body*/
     background-size: 80px;
 }
 
+input {
+    background-color: #F69B9B;
+}
+
+button {
+    background-color: #5070FE;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+h2, h4 {
+    margin: auto;
+}
+
+
 #buscador {
-    background-color: #D13030;
+    background-color: #F94F4F;
+    padding: 10px;
+    text-align: center;
+}
+#secPokedex {
+    
+}
+
+#pokedex {
+    text-align: center;
+    background-color: #0D33C2;
+    width:min-content;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+#pantalla {
+    background-color: #A7AAB6;
+    width: 300px;
+    height: 200px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#errorPaginacion {
+    background-color: #BB2929;
+    color: #08CBD8;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
 }
