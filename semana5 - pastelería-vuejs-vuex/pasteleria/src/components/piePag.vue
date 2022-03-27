@@ -10,8 +10,9 @@
             <span>&nbsp;&nbsp;&nbsp;&nbsp;Lunes a Viernes de 10:00am a 10:00pm <br>
             &nbsp;&nbsp;&nbsp;&nbsp;Sábado de 10:00am a 2:00pm <br></span>       
         </div>
+        <br><br>
         <div class="derechosAutor">
-            <span><i>Con amor, por que Pantheon siempre quizo ser panadero.</i></span>
+            <span><i>Con amor, "siempre quice ser panadero" Pantheon.</i></span>
         </div>
     </footer>
 </template>
@@ -32,7 +33,7 @@ footer {
     padding-bottom: 20px;
 
     text-align: left;
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
     height: auto; 
@@ -41,7 +42,7 @@ footer {
     padding-left: 100px;
 }
 .derechosAutor {
-    padding-right: 100px;
+    padding-right: 10%;
     text-align: right;
 }
 </style>
