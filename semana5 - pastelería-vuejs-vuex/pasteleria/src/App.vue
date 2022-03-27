@@ -1,10 +1,25 @@
-<template>
+<template class="templateNav">
+  <cabecera/>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Pastelería</router-link> |
+    <router-link to="/administrador">Administrador</router-link>
   </nav>
   <router-view/>
+  <piePag/>
 </template>
+
+<script>
+import cabecera from '@/components/cabecera.vue'
+import piePag from '@/components/piePag.vue'
+
+export default {
+  components: {
+    cabecera,
+    piePag,
+  }
+}
+</script>
+
 
 <style>
 #app {
@@ -16,7 +31,9 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 10px;
+  margin: 0%;
+  background-color: blue;
 }
 
 nav a {
