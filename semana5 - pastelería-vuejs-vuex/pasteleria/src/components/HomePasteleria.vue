@@ -1,7 +1,7 @@
 <template>
     <div class="pasteleria">    
         <div class="center">
-            <h2>Pastelería Pantheon el panadero</h2>
+            <h1>Pastelería Pantheon el panadero</h1>
             <i>"Siempre quice ser panadero." pantheon</i>
             <br>
             <img id="pantheon" alt="imagen pantheon panadero feliz" width="196" eigth="196" srcset="" src="https://64.media.tumblr.com/eedf2eb5e02a5e0fd94b6ffd5b4678d3/tumblr_pvo5avG7Og1vo6vclo10_400.png">

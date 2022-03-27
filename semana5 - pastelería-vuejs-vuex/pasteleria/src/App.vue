@@ -2,6 +2,7 @@
   <cabecera/>
   <nav>
     <router-link to="/">Pastelería</router-link> |
+    <router-link to="/ordenar">Pedir pastel</router-link> |
     <router-link to="/administrador">Administrador</router-link>
   </nav>
   <router-view/>
@@ -36,7 +37,7 @@ export default {
 nav {
   padding: 10px;
   margin: 0%;
-  background-color: blue;
+  background-color: #c29b61;
 }
 
 nav a {
@@ -45,6 +46,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #01870B;
+  font-size: 25px;
 }
 </style>
