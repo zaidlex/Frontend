@@ -1,5 +1,7 @@
 <template>
-    <img src="@/assets/HeaderPantheonPanadero.png" alt="">
+    <header>
+        <img src="@/assets/HeaderPantheonPanadero.png" alt="">
+    </header>
 </template>
 
 <script>
@@ -12,6 +14,9 @@ export default {
 </script>
 
 <style scoped>
+header {
+    margin: 0%;
+}
 img {
 
     margin-top: -10px;

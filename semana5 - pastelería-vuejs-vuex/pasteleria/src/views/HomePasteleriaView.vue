@@ -15,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.home {
+    padding-bottom: auto;    /* Footer height */
+}
+</style>
