@@ -4,7 +4,7 @@
             <h1>Pastelería Pantheon el panadero</h1>
             <i>"Siempre quice ser panadero." pantheon</i>
             <br>
-            <img id="pantheon" alt="imagen pantheon panadero feliz" width="196" eigth="196" srcset="" src="https://64.media.tumblr.com/eedf2eb5e02a5e0fd94b6ffd5b4678d3/tumblr_pvo5avG7Og1vo6vclo10_400.png">
+            <img id="pantheon" alt="imagen pantheon panadero feliz" srcset="" src="https://64.media.tumblr.com/eedf2eb5e02a5e0fd94b6ffd5b4678d3/tumblr_pvo5avG7Og1vo6vclo10_400.png">
         </div>
         <br>
 
@@ -26,15 +26,15 @@
             <h3 class="title" >Diseños que se les puede colocar al pastel.</h3>
             <table class="tablaDisenos">
                 <tr>
-                    <td><img src="https://lh6.googleusercontent.com/-S1Qa5nGH62U/VRBCLcrQvDI/AAAAAAABsLA/qzq8cPMQzkw/s800/DSC05808.JPG" alt="La monarca"></td>
+                    <td><img class="pastel" src="https://lh6.googleusercontent.com/-S1Qa5nGH62U/VRBCLcrQvDI/AAAAAAABsLA/qzq8cPMQzkw/s800/DSC05808.JPG" alt="La monarca"></td>
                     <td>La monarca.</td>
                 </tr>
                 <tr>
-                    <td><img src="https://m.media-amazon.com/images/I/712zHoGantL._AC_SX466_.jpg" alt="Rosetón amarillo y rosa"></td>
+                    <td><img class="pastel" src="https://m.media-amazon.com/images/I/712zHoGantL._AC_SX466_.jpg" alt="Rosetón amarillo y rosa"></td>
                     <td>Rosetón amarillo y rosa.</td>
                 </tr>
                 <tr>
-                    <td><img src="https://image.winudf.com/v2/image1/Y29tLkJpcnRoZGF5Q2FrZS5QYXBhdGhfc2NyZWVuXzRfMTU0NzM1MDA0N18wODg/screen-4.jpg?fakeurl=1&type=.jpg" alt="Frutal"></td>
+                    <td><img class="pastel" src="https://image.winudf.com/v2/image1/Y29tLkJpcnRoZGF5Q2FrZS5QYXBhdGhfc2NyZWVuXzRfMTU0NzM1MDA0N18wODg/screen-4.jpg?fakeurl=1&type=.jpg" alt="Frutal"></td>
                     <td>Frutal.</td>
                 </tr>
             </table>
@@ -68,6 +68,8 @@ export default {
     border-radius: 30px;
     border: 1px solid blue;
     padding: 5px;
+    width: 196px;
+    height: auto;
 }
 
 ul {
@@ -80,11 +82,6 @@ li {
 }
 a {
   color: #42b983;
-}
-img {
-    max-width: 80%;
-    min-width: 40%;
-    height: auto;
 }
 td {
     font-size: 25px;
@@ -128,6 +125,11 @@ tr {
 .tablaDisenos {
     padding: 20px;
     margin: auto;
+}
+.pastel {
+    max-width: 80%;
+    min-width: 40%;
+    height: auto;
 }
 
 .botonPedir {
