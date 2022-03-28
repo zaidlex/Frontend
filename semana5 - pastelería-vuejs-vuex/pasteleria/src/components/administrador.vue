@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <table class="center">
-            <tr>
+    <div class="administrador">
+        <table class="tablaPedidos">
+            <tr id="trTablaTitulos">
                 <th>Pedido</th>
                 <th>Sabor de pastel</th>
                 <th>diseño de pastel</th>
@@ -40,3 +40,33 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.administrador {
+    overflow-x:auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#trTablaTitulos {
+    background-color: rgb(212,172,104,0.6);
+    width: 100%;
+}
+th {
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: 2px solid black;
+}
+
+td {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.tablaPedidos {
+    background-color: rgb(248,211,137,0.6);
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+</style>
