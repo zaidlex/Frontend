@@ -98,30 +98,6 @@ tr {
     display: block;
 }
 
-.title {
-    font-weight:800;
-    font-family: 'Times New Roman', serif;    
-}
-
-.sabores {
-    background-color: rgb(238,208,157,0.6);
-    padding: 7px;
-    border-radius: 30px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.disenos {
-    background-color: rgb(248,211,137,0.6);
-    margin-bottom: 30px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 7px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 30px;
-}
-
 .tablaDisenos {
     padding: 20px;
     margin: auto;
