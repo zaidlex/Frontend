@@ -48,7 +48,7 @@ export default {
     margin-bottom: 30px;
 }
 #trTablaTitulos {
-    background-color: rgb(212,172,104,0.6);
+    background-color: rgb(212,172,104,0.85);
     width: 100%;
 }
 th {
@@ -63,7 +63,7 @@ td {
 }
 
 .tablaPedidos {
-    background-color: rgb(248,211,137,0.6);
+    background-color: rgb(248,211,137,0.85);
     width: 80%;
     border-collapse: collapse;
     margin-left: 10%;

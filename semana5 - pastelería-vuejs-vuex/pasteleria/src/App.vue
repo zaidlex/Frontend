@@ -32,6 +32,9 @@ export default {
   color: #2c3e50;
   position: relative;
   min-height: 100vh;
+
+  background-image: url(@/assets/panaderia-background.webp);
+  background-size: 30%;
 }
 
 nav {
@@ -51,12 +54,16 @@ nav a.router-link-exact-active {
 }
 
 .title {
-    font-weight:800;
+    font-weight:1000;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 50px;
     font-family: 'Times New Roman', serif;    
 }
 
 .sabores {
-    background-color: rgb(238,208,157,0.6);
+    background-color: rgb(238,208,157,0.9);
     padding: 7px;
     border-radius: 30px;
     margin-left: 10%;
@@ -64,7 +71,7 @@ nav a.router-link-exact-active {
 }
 
 .disenos {
-    background-color: rgb(248,211,137,0.6);
+    background-color: rgb(248,211,137,0.85);
     margin-bottom: 30px;
     margin-left: 10%;
     margin-right: 10%;

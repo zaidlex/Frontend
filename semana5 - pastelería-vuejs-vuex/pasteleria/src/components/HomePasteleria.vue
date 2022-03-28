@@ -1,6 +1,6 @@
 <template>
     <div class="pasteleria">    
-        <div class="center">
+        <div class="bienvenida">
             <h1>Pastelería Pantheon el panadero</h1>
             <i>"Siempre quice ser panadero." pantheon</i>
             <br>
@@ -40,7 +40,7 @@
             </table>
             <br><br>
             <div>
-                <a href="./PasteleriaCompra.html">
+                <a href="#">
                     <button class="botonPedir" id="pedido">Hacer pedido</button>
                 </a>
             </div>
@@ -62,6 +62,19 @@ export default {
 <style scoped>
 .pasteleria {
     margin: auto;    
+}
+
+.bienvenida {
+    background-color:rgb(238,208,157,0.85);
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
 }
 
 #pantheon {

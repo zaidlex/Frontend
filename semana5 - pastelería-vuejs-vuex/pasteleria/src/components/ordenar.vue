@@ -1,5 +1,5 @@
 <template>
-    <h2 class="title">Crea tu propio pastel con tus sabores deseados y los diseños que tu escojas.</h2>
+    <h2 class="title backColor">Crea tu propio pastel con tus sabores deseados y los diseños que tu escojas.</h2>
     <br>
     <!--Formulario para realizar pedido-->
     <form action="" method="post">
@@ -95,6 +95,10 @@ input[type=checkbox] {
     font-family: "Georgia", serif;
 }
 
+.backColor {
+    background-color:rgb(238,208,157,0.85);
+}
+
 .boxDisenos{
     margin: 10px;
 }
@@ -105,7 +109,7 @@ input[type=checkbox] {
 }
 
 .datos {
-    background-color: rgb(212,172,104,0.6);
+    background-color: rgb(212,172,104,0.85);
     margin-left: 10%;
     margin-right: 10%;
     padding: 7px;
@@ -126,7 +130,7 @@ input [type=text] {
     padding: 10px;
 }
 .boton {
-    background-color: rgb(248,211,137,0.6);
+    background-color: rgb(248,211,137,0.85);
     font-size: 20px;
     border-radius: 4px;
     margin: 20px;
