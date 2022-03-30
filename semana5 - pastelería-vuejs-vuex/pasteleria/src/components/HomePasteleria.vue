@@ -1,5 +1,6 @@
 <template>
-    <div class="pasteleria">    
+    <div class="pasteleria">   
+        <a id="top" href="#"> </a>
         <div class="bienvenida">
             <h1>Pastelería Pantheon el panadero</h1>
             <i>"Siempre quice ser panadero." pantheon</i>
@@ -24,6 +25,7 @@
         <!--Diseños de los pasteles-->
         <div class="disenos">
             <h3 class="title" >Diseños que se les puede colocar al pastel.</h3>
+            <span>Por $20.00 cada diseño.</span>
             <table class="tablaDisenos">
                 <tr>
                     <td><img class="pastel" src="@/assets/LaMonarca.jpg" alt="La monarca"></td>
@@ -40,9 +42,7 @@
             </table>
             <br><br>
             <div>
-                <a href="#">
-                    <button class="botonPedir" id="pedido">Hacer pedido</button>
-                </a>
+                <button class="botonPedir" id="pedido" @click="$router.push({ path: '/ordenar' })">Hacer pedido</button>
             </div>
             <br>
         </div>

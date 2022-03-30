@@ -1,38 +1,39 @@
 <template>
-    <h2 class="title backColor">Crea tu propio pastel con tus sabores deseados y los diseños que tu escojas.</h2>
+    <h2 class="title backColor" id="top">Crea tu propio pastel con tus sabores deseados y
+        los diseños que tu escojas.</h2>
     <br>
     <!--Formulario para realizar pedido-->
-    <form action="" method="post">
+    <form action="#">
         <!--checkbox para escoger sabores-->
         <div class="sabores">
-        <label class="labelTitle" for="saboresInput">Escoge los sabores de tu pastel.</label> <br>
-        <input type="checkbox" name="SabVainilla" id="SabVainilla" value="vainilla"> Vainilla
-        |
-        <input type="checkbox" name="SabChocolate" id="SabChocolate" value="chocolate"> Chocolate
-        |
-        <input type="checkbox" name="SabFresa" id="SabFresa" value="fresa"> Fresa
-        |
-        <input type="checkbox" name="SabDurazno" id="SabDurazno" value="durazno"> Durazno 
-        |
-        <input type="checkbox" name="SabLimon" id="SabLimon" value="limon"> Limon
+            <label class="labelTitle" for="saboresInput">Escoge los sabores de tu pastel ($20.00 cada uno).</label> <br>
+            <input type="checkbox" name="SabVainilla" id="SabVainilla" v-model="sabores" value="vainilla"> Vainilla
+            |
+            <input type="checkbox" name="SabChocolate" id="SabChocolate" v-model="sabores" value="chocolate"> Chocolate
+            |
+            <input type="checkbox" name="SabFresa" id="SabFresa" v-model="sabores" value="fresa"> Fresa
+            |
+            <input type="checkbox" name="SabDurazno" id="SabDurazno" v-model="sabores" value="durazno"> Durazno 
+            |
+            <input type="checkbox" name="SabLimon" id="SabLimon" v-model="sabores" value="limon"> Limon
         </div>
         <br><br>
 
         <!--checkbox para escoger diseños-->
         <div class="disenos">
-            <label class="labelTitle" for="disenosInput">Escoge los diseños de tu pastel.</label>
+            <label class="labelTitle" for="disenosInput">Escoge los diseños de tu pastel ($40.00 cada uno).</label>
             <br>
             <ul>
                 <li>
-                    <input type="checkbox" class="boxDisenos" name="DisMonarca" id="DisMonarca" value="monarca"><img width="200" height="160" src="@/assets/LaMonarca.jpg" alt="La monarca">
+                    <input type="checkbox" class="boxDisenos" name="DisMonarca" id="DisMonarca" v-model="disenos" value="monarca"><img width="200" height="160" src="@/assets/LaMonarca.jpg" alt="La monarca">
                 </li>
                 <br>
                 <li>
-                    <input type="checkbox" class="boxDisenos" name="DisRoseton" id="DisRoseton" value="roseton"><img width="200" height="160" src="@/assets/RosetonAmarilloRosa.jpg" alt="Rosetón amarillo y rosa">
+                    <input type="checkbox" class="boxDisenos" name="DisRoseton" id="DisRoseton" v-model="disenos" value="roseton"><img width="200" height="160" src="@/assets/RosetonAmarilloRosa.jpg" alt="Rosetón amarillo y rosa">
                 </li>
                 <br>
                 <li>
-                    <input type="checkbox" class="boxDisenos" name="DisFrutal" id="DisFrutal" value="frutal"><img width="200" height="160" src="@/assets/Frutal.jpg" alt="Frutal">
+                    <input type="checkbox" class="boxDisenos" name="DisFrutal" id="DisFrutal" v-model="disenos" value="frutal"><img width="200" height="160" src="@/assets/Frutal.jpg" alt="Frutal">
                 </li>
             </ul>
             
@@ -46,17 +47,20 @@
             <h2 class="labelTitle">Para poder concluir el pedido, por favor llenar la siguiente información.</h2>
             <div class="inputDatos">
                 <label for="Nombre">Nombre:</label>
-                <input type="text" name="Nombre" id="Nombre" placeholder="Obligatorio">
+                <input type="text" name="Nombre" id="Nombre" placeholder="Obligatorio"  required>
             </div>
             <br>
             <div class="inputDatos">
                 <label for="Telefono">Teléfono:</label>
-                <input type="tel" name="Telefono" id="Telefono" placeholder="Obligatorio">
+                <input type="tel" name="Telefono" id="Telefono" placeholder="Obligatorio" required>
             </div>
             <br>
             <div class="inputDatos">
                 <label for="Correo">Correo electronico:</label>
-                <input type="email" name="Correo" id="Correo" placeholder="Obligatorio">
+                <input type="email" name="Correo" id="Correo" placeholder="Obligatorio" required>
+            </div>
+            <div class="inputDatos">
+                <span >Precio total: ${{precioTotal}}.00</span>
             </div>
         </div>
         <div class="botones" >
@@ -70,10 +74,29 @@
 <script>
 export default {
     name: "ordenar",
-    props: {
-
-    }
+    data: function(){
+        return {
+            sabores: [],
+            disenos: [],
+            nombre: "",
+            telefono: "",
+            correo: "",
+            precio: 120,
+        }
+    },
+    mounted() {
+        window.scrollTo(0, 0);
+    },
+    computed: {
+        precioTotal: function() {            
+            this.precio = 120;  
+            this.precio += this.sabores.length * 20;
+            this.precio += this.disenos.length * 40;
+            return this.precio;
+        }
+    },
 }
+
 </script>
 
 <style scoped>
