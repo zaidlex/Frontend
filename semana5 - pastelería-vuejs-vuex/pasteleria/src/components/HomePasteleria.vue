@@ -17,7 +17,7 @@
                 <li>Chocolate</li>
                 <li>Fresa</li>
                 <li>Durazno</li>
-                <li>Limon</li>
+                <li>Limón</li>
             </ul>
         </div>
         <br><br>
@@ -54,7 +54,10 @@ export default {
   name: 'HomePasteleria',
   props: {
     
-  }
+  },
+  mounted() {
+        window.scrollTo(0, 0);
+    },
 }
 </script>
 
