@@ -18,13 +18,26 @@ export default createStore({
       "precio": 240}],
   },
   getters: {
+      getIndex: (state) => (pedido) =>{
+        return state.PedidosTotales.indexOf(pedido) + 1;
+      },
+      getSabores: (state) => (pedido) => {
+        let sabores ="";
+        return sabores.concat(pedido.sabor);
+      },
+      getDisenos: (state) => (pedido) => {
+        let disenos ="";
+        return disenos.concat(pedido.diseno);
+      }
   },
   mutations: {
-    
+    pedidoEnFila(state, pedido){
+      PedidosTotales.push(pedido);
+    }
   },
   actions: {
-    addPedido(pedido){
-      PedidosTotales.push(pedido);
+    addPedido (pedido){
+      
       console.log(PedidosTotales);
     }
   },

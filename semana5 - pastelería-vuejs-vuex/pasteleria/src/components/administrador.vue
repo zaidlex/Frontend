@@ -10,24 +10,16 @@
                 <th>Correo</th>
                 <th>Precio</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Vainilla</td>
-                <td>monarca</td>
-                <td>Rodrigo Hernández</td>
-                <td>4435673412</td>
-                <td>RodHerr@gmail.com</td>
-                <td>$190.00</td>
+            <tr  v-for="pedido in $store.state.PedidosTotales" :key="pedido._id">
+                <td>{{ $store.getters.getIndex(pedido) }}</td>
+                <td>{{ $store.getters.getSabores(pedido) }}</td>
+                <td>{{ $store.getters.getDisenos(pedido) }}</td>
+                <td>{{ pedido.nombre }}</td>
+                <td>{{ pedido.telefono }}</td>
+                <td>{{ pedido.correo }}</td>
+                <td>{{ pedido.precio }}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Vainilla chocolate</td>
-                <td>frutal roseton</td>
-                <td>Daniela Guzmán</td>
-                <td>44456334412</td>
-                <td>daniG@gmail.com</td>
-                <td>$380.00</td>
-            </tr>
+
         </table>
     </div>
 </template>
