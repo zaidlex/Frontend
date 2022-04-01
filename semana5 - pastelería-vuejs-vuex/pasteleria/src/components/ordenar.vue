@@ -32,7 +32,7 @@
             </li>
             <br>
             <li>
-                <input type="checkbox" class="boxDisenos" name="DisFrutal" id="DisFrutal" v-model.lazy="disenos" value="frutal"><img width="200" height="160" src="@/assets/Frutal.jpg" alt="Frutal">
+                <input type="checkbox" class="boxDisenos" name="DisFrutal" id="DisFrutal" v-model="disenos" value="frutal"><img width="200" height="160" src="@/assets/Frutal.jpg" alt="Frutal">
             </li>
         </ul>
         
@@ -46,17 +46,17 @@
         <h2 class="labelTitle">Para poder concluir el pedido, por favor llenar la siguiente información.</h2>
         <div class="inputDatos">
             <label for="Nombre">Nombre:</label>
-            <input type="text" name="Nombre" id="Nombre" placeholder="Obligatorio"  required>
+            <input type="text" v-model="nombre" name="Nombre" id="Nombre" placeholder="Obligatorio"  required>
         </div>
         <br>
         <div class="inputDatos">
             <label for="Telefono">Teléfono:</label>
-            <input type="tel" name="Telefono" id="Telefono" placeholder="Obligatorio" required>
+            <input type="tel" v-model="telefono" name="Telefono" id="Telefono" placeholder="Obligatorio" required>
         </div>
         <br>
         <div class="inputDatos">
             <label for="Correo">Correo electronico:</label>
-            <input type="email" name="Correo" id="Correo" placeholder="Obligatorio" required>
+            <input type="email" v-model="correo" name="Correo" id="Correo" placeholder="Obligatorio" required>
         </div>
         <div class="inputDatos">
             <span >Precio total: ${{precioTotal}}.00</span>
@@ -66,7 +66,7 @@
     <div class="botones" >
         <!-- <input type="reset" class="boton" value="Limpiar pedido"> -->
         <button class="boton" @click="reset">Limpiar pedido</button>
-        <button class="boton" @click="nuevoPedido">Comprar</button>
+        <button class="boton" @click="nuevoPedido" :disabled='isDisabled'>Comprar</button>
     </div>
 
 </template>
@@ -99,7 +99,8 @@ export default {
                 "telefono": this.telefono,
                 "correo": this.correo,
                 "precio": this.precio}
-            $store.actions.addPedido(pedido);
+            //console.log(pedido);
+            this.$store.commit('pedidoEnFila', pedido)
             this.$router.push({ path: '/' })
         },
     },
@@ -110,6 +111,15 @@ export default {
             this.precio += this.disenos.length * 40;
             return this.precio;
         },
+        isDisabled: function(){
+    	    return !( 
+                this.sabores.length >= 1 && 
+                this.disenos.length >=1 &&
+                this.nombre != "" &&
+                this.telefono != "" &&
+                this.correo != ""
+                );
+        }
     },
 }
 

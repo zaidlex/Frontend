@@ -32,7 +32,7 @@ export default createStore({
   },
   mutations: {
     pedidoEnFila(state, pedido){
-      PedidosTotales.push(pedido);
+      state.PedidosTotales.push(pedido);
     }
   },
   actions: {
